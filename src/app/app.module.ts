@@ -18,7 +18,7 @@ import { UserMovesComponent } from './components/charts/echarts/user-moves/user-
 import { EstimatedRevenueComponent } from './components/charts/echarts/estimated-revenue/estimated-revenue.component';
 import { GraphComponent } from './components/charts/d3graph/graph/graph.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ProfileModalComponent } from './components/modal/modal.component';
+import { ProfileModalComponent } from './components/modal/profile-modal.component';
 import { AvatarModule } from 'ngx-avatar';
 import { ImageCropperModule } from 'ngx-image-cropper';
 

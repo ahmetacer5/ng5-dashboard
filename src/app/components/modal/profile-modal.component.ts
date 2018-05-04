@@ -3,8 +3,8 @@ import { FakeBackendService } from '../../services/fake-backend.service';
 
 @Component({
   selector: 'app-profile-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.css']
+  templateUrl: './profile-modal.component.html',
+  styleUrls: ['./profile-modal.component.css']
 })
 export class ProfileModalComponent implements OnInit {
 
