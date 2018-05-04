@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FakeBackendService } from '../../services/fake-backend.service';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'app-profile-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
-export class ModalComponent implements OnInit {
+export class ProfileModalComponent implements OnInit {
 
   public visible = false;
   public visibleAnimate = false;
