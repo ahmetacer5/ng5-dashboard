@@ -4,22 +4,26 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot -prod"
   },
+  "engines": {
+    "node": "6.11.0",
+    "npm": "3.10.10"
+  },
   "private": true,
   "dependencies": {
-    "@angular/cli": "1.6.2",
-    "@angular/compiler-cli": "^5.0.0",
     "@angular-devkit/core": "^0.6.0",
     "@angular/animations": "^5.0.0",
     "@angular/cdk": "^5.2.5",
+    "@angular/cli": "1.6.2",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
+    "@angular/compiler-cli": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/flex-layout": "^5.0.0-beta.14",
     "@angular/forms": "^5.0.0",
@@ -34,6 +38,7 @@
     "core-js": "^2.4.1",
     "crypto-js": "^3.1.9-1",
     "echarts": "^4.1.0",
+    "express": "^4.16.3",
     "hammerjs": "^2.0.8",
     "i": "^0.3.6",
     "ng-animate": "^0.3.1",
@@ -42,7 +47,9 @@
     "ngx-echarts": "^2.1.0",
     "ngx-image-cropper": "^0.2.6",
     "npm": "^6.0.0",
+    "path": "^0.12.7",
     "rxjs": "^5.5.2",
+    "typescript": "~2.4.2",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -53,6 +60,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
