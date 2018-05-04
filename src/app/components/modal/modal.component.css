@@ -1,0 +1,17 @@
+.modal {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  margin-top: 164px;
+}
+
+.modal-header {
+  height: 64px;
+}
+
+.btn-close {
+  position: absolute;
+  top: -5px;
+  right: -236px;
+}

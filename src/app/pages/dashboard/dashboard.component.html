@@ -1,0 +1,86 @@
+<nav class="navbar navbar-dark bg-primary">
+  <span class="navbar-brand">Dashboard</span>
+  <div (click)="$event.preventDefault()" class="navbar-right">
+    <p class="navbar-text">
+      Signed in as
+      <a href="#" class="navbar-link" (click)="modal.show()">{{userInfo?.name + ' ' + userInfo?.surName}}</a>
+      <button type="button" class="btn btn-dark" (click)="logOut()">Log Out</button>
+    </p>
+  </div>
+  <app-modal #modal>
+    <div class="app-modal-header">
+      header
+    </div>
+    <div class="app-modal-body">
+      Whatever content you like, form fields, anything
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </app-modal>
+</nav>
+<div fxLayout="column" class="dashboard-wrapper">
+  <div fxFlex="initial">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">ChartJS - User Logins</span>
+    </nav>
+  </div>
+  <div fxFlex="600px" fxFlex.xs="350px">
+    <app-user-logins></app-user-logins>
+  </div>
+  <div fxFlex="initial">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">ChartJS - New Accounts</span>
+    </nav>
+  </div>
+  <div fxFlex="600px" fxFlex.xs="350px">
+    <app-new-acounts></app-new-acounts>
+  </div>
+  <div fxFlex="initial">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">EChart - User Activities</span>
+    </nav>
+  </div>
+  <div fxFlex="600px" fxFlex.xs="350px">
+    <app-user-moves></app-user-moves>
+  </div>
+  <div fxFlex="initial">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">EChart - Estimated Revenue</span>
+    </nav>
+  </div>
+  <div fxFlex="600px" fxFlex.xs="350px">
+    <app-estimated-revenue></app-estimated-revenue>
+  </div>
+  <div fxFlex="initial">
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand">D3 Grap - Sample Data</span>
+    </nav>
+  </div>
+  <div fxFlex="600px" fxFlex.xs="350px" style="text-align: center;">
+    <app-graph></app-graph>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

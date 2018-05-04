@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate {
               @Inject(DOCUMENT) private document: any) { }
 
   canActivate() {
-    if (sessionStorage.getItem('SESSIONID')) {
+    if (sessionStorage.getItem('SESSION')) {
       // logged in so return true
       return true;
     }

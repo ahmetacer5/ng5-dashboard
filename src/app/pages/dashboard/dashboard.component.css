@@ -1,0 +1,24 @@
+.navbar-text {
+  margin: 0 !important;
+}
+
+.dashboard-wrapper {
+  position: absolute;
+  top: 78px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 4px 20%;
+  overflow: auto;
+}
+
+.navbar {
+  -webkit-box-shadow: #0000005e 0px 6px 7px 0px;
+  -moz-box-shadow: #0000005e 0px 6px 7px 0px;
+  box-shadow: #0000005e 0px 6px 7px 0px;
+}
+
+.navbar-right {
+  margin-right: 0;
+  margin-left: auto;
+}

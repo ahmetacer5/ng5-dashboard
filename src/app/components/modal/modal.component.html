@@ -1,0 +1,72 @@
+<div (click)="onContainerClicked($event)" class="modal fade" tabindex="-1" [ngClass]="{'in': visibleAnimate}"
+     [ngStyle]="{'display': visible ? 'block' : 'none', 'opacity': visibleAnimate ? 1 : 0}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div
+          fxLayout="column"
+          fxLayoutGap="24px"
+          fxLayoutGap.xs="8px"
+          fxLayoutAlign="center center">
+          <div fxFlex="initial" style="position: relative;">
+            <div style="width: 96px; height: 96px;">
+              <ngx-avatar *ngIf="croppedImage" class="profile-card-header-image"
+                          [src]="croppedImage"
+                          size="96" (click)="uploader.click()"></ngx-avatar>
+              <ngx-avatar *ngIf="!croppedImage" mat-card-avatar class="profile-card-header-image"
+                          name="{{(userInfo?.name + ' ' + userInfo?.surName).toUpperCase()}}"
+                          size="96"></ngx-avatar>
+              <button mat-icon-button *ngIf="!showCropper" style="position: absolute;bottom: 4px;right: 12px;"
+                      matTooltip="Fotoğraf Yükle" (click)="uploader.click()">
+                <i class="material-icons">photo_camera</i>
+              </button>
+              <input type="file" #uploader style="display: none" (change)="fileChangeEvent($event)"/>
+            </div>
+
+          </div>
+          <div xFlex="initial" [fxShow]="showCropper">
+            <image-cropper
+              [imageChangedEvent]="imageChangedEvent"
+              [maintainAspectRatio]="true"
+              [aspectRatio]="1 / 1"
+              [resizeToWidth]="96"
+              format="png"
+              (imageCropped)="imageCropped($event)"
+              (imageLoaded)="imageLoaded()"
+              (loadImageFailed)="loadImageFailed()"
+              style="max-height: 360px;max-width: 360px"
+            ></image-cropper>
+          </div>
+          <div xFlex="36px" [fxShow]="showCropper">
+            <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 100%" fxLayoutGap="36px">
+              <div xFlex="initial">
+                <button type="button" class="btn btn-secondary" (click)="cancelCropImage()">Cancel</button>
+              </div>
+              <div xFlex="initial">
+                <button type="button" class="btn btn-primary" (click)="cropImage()">Use</button>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="initial" [fxShow]="!showCropper">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Name" disabled [value]="userInfo?.name">
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Surname" disabled [value]="userInfo?.surName">
+            </div>
+          </div>
+          <div xFlex="initial" [fxShow]="!showCropper">
+            <div fxLayout="row" fxLayoutAlign="space-between center" style="width: 100%" fxLayoutGap="36px">
+              <div xFlex="initial">
+                <button type="button" class="btn btn-secondary" (click)="hide()">Cancel</button>
+              </div>
+              <div xFlex="initial">
+                <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,9 +30,6 @@ export class EstimatedRevenueComponent implements OnInit, OnDestroy {
 
     // initialize chart options:
     this.options = {
-      title: {
-        text: 'Estimated Revenue'
-      },
       tooltip: {
         trigger: 'axis',
         formatter: (params) => {

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="card card-container">
+    <img id="profile-img" class="profile-img-card" src="assets/img/loginicon.svg" />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" (ngSubmit)="login()" [formGroup]="fmrGroup">
+      <input type="text" id="inputUserName" class="form-control" placeholder="Username" formControlName="username" autofocus>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password">
+      <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+    </form>
+  </div>
+</div>
