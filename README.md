@@ -1,4 +1,4 @@
-# Ng5Dashboard [Online Demo](https://ng5-dashboard.herokuapp.com/login)
+# Ng5Dashboard [Online Demo](https://ng5-dashboard.herokuapp.com/login) login info user name "admin" password "admin"
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2.
 
